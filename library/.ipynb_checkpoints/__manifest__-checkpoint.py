@@ -28,4 +28,7 @@
     ],
     # only loaded in demonstration mode
     'demo':        [],
+    'application': True,
+    'installable': True,
+    'auto_install': False,
 }
