@@ -24,10 +24,11 @@
     # always loaded
     'data':        [
         "security/ir.model.access.csv",
-        "data/library_data.xml",
     ],
     # only loaded in demonstration mode
-    'demo':        [],
+    'demo':        [
+        "data/library_data.xml",
+    ],
     'application': True,
     'installable': True,
     'auto_install': False,
