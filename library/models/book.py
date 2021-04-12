@@ -5,6 +5,8 @@ from odoo import fields, models
 class Books(models.Model):
     _name = 'library.book'
     _description = 'Book'
+    
+    name = fields.Char(string='Title')
 
     author_ids = fields.Many2many("library.partner", string="Authors")
     edition_date = fields.Date()
