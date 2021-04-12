@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="customer_daenerys" model="library.partner">
+        <field name="name">Dt</field>
+        <field name="email">dt@dt.org</field>
+        <field name="address">Ded</field>
+    </record>
+
+    <record id="customer_tyrion" model="library.partner">
+        <field name="name">RE</field>
+        <field name="email">re@re.com</field>
+        <field name="address">Red</field>
+    </record>
+
+    <record id="author_martin" model="library.partner">
+        <field name="name">MM</field>
+        <field name="email">m@m.com</field>
+        <field name="address">mer</field>
+        <field name="partner_type">author</field>
+    </record>
+
+    <record id="book_got" model="library.book">
+        <field name="name">Harry Potter</field>
+        <field name="edition_date">2020-08-01</field>
+        <field name="isbn">0-553-10354-7</field>
+    </record>
+
+    <record id="publisher_got" model="library.publisher">
+        <field name="name">JKR</field>
+    </record>
+</odoo>
