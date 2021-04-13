@@ -6,7 +6,7 @@ class Books(models.Model):
     _name = 'library.book'
     _description = 'Book'
     
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin', 'image.mixin']
     
     name = fields.Char(string='Title')
 
@@ -16,4 +16,6 @@ class Books(models.Model):
     publisher_id = fields.Many2one('library.publisher', string='Publisher')
 
     rental_ids = fields.One2many('library.rental', 'book_id', string='Rentals')
+    
+    face = fields.Image(string="Portada")
 

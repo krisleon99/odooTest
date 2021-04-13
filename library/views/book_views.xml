@@ -17,6 +17,7 @@
                         </group>
                     </group>
                     <group>
+                        <field name="face" />
                         <field name="edition_date" />
                         <field name="isbn" />
                         <field name="publisher_id" />
