@@ -18,7 +18,6 @@ def floatime_to_hour_minute(f):
 
 class TaskType(models.Model):
     _name = 'coopplanning.task.type'
-    _description = 'Task Type'
 
     name = fields.Char()
     description = fields.Text()

@@ -6,6 +6,8 @@ class Books(models.Model):
     _name = 'library.book'
     _description = 'Book'
     
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+    
     name = fields.Char(string='Title')
 
     author_ids = fields.Many2many("library.partner", string="Authors")
