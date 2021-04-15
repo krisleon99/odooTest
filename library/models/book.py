@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models
+from odoo import fields, models, api
+from odoo.exceptions import ValidationError, UserError
 
 
 class Books(models.Model):
@@ -18,4 +19,17 @@ class Books(models.Model):
     rental_ids = fields.One2many('library.rental', 'book_id', string='Rentals')
     
     face = fields.Image(string="Portada")
+    
+    base_price = fields.Float(string="Precio base", default=0.00)
+    aditional_price = fields.Float(string="Precio base", default=0.00)
+    total = fields.Float(string="Precio base", readonly=True)
 
+    
+    @api.onchange("base_price","aditional_price")
+    def _onchange_total(self):
+        if self.base_price < 0.00:
+            raise UserError("El precio base es negativo")
+            
+        self.total =  self.base_price + self.aditional_price
+        
+        
