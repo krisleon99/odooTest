@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models, api
+from odoo import fields, models, api, _ 
 from odoo.exceptions import ValidationError, UserError
 
 
@@ -31,7 +31,13 @@ class Books(models.Model):
             raise UserError("El precio base es negativo")
             
         self.total =  self.base_price + self.aditional_price
-        
+
+    @api.constrains('order')
+    def _check_aditional_fee(self):
+        for record in self:
+            if record.aditional_price:
+                if record.aditional_price < 5:
+                    raise ValidationError(_('The order must be greater than 6'))
 """
     @api.constrains("aditional_price")
     def _check_aditional_fee(self):
