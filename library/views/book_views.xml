@@ -21,13 +21,19 @@
                         <field name="edition_date" />
                         <field name="isbn" />
                         <field name="publisher_id" />
-                        <field name="rental_ids" />
                     </group>
                      <group>
                         <field name="base_price" />
                         <field name="aditional_price" />
                         <field name="total" force_save="1" />
                     </group>
+                     <notebook>
+                        <page name="rentas" string="Rentas">
+                            <field name="rental_ids" />
+                           <!-- <field name="rental_ids.rental_date" />-->
+                            
+                        </page>
+                    </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
