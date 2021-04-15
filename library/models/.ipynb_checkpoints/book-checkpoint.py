@@ -32,7 +32,7 @@ class Books(models.Model):
             
         self.total =  self.base_price + self.aditional_price
 
-    @api.constrains('order')
+    @api.constrains('aditional_price')
     def _check_aditional_fee(self):
         for record in self:
             if record.aditional_price:

@@ -13,11 +13,10 @@
                             <field name="name" />
                         </group>
                         <group>
-                            <field name="author_ids" />
+                            <field name="face" />
                         </group>
                     </group>
                     <group>
-                        <field name="face" />
                         <field name="edition_date" />
                         <field name="isbn" />
                         <field name="publisher_id" />
@@ -30,6 +29,9 @@
                      <notebook>
                         <page name="rentas" string="Rentas">
                             <field name="rental_ids" />
+                        </page>
+                        <page name="autor" string="Autores">
+                            <field name="author_ids" />
                         </page>
                     </notebook>
                 </sheet>
