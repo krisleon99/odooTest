@@ -36,6 +36,6 @@ class Books(models.Model):
     @api.constrains("aditional_price")
     def _check_aditional_fee(self):
         for records in self:
-            if self.aditional_price < 10:
+            if self.aditional_price < 10.00:
                 raise ValidationError("No puede ser la tarifa adicional menor a 10")
         

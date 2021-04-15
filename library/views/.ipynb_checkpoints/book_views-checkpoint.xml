@@ -30,8 +30,6 @@
                      <notebook>
                         <page name="rentas" string="Rentas">
                             <field name="rental_ids" />
-                           <!-- <field name="rental_ids.rental_date" />-->
-                            
                         </page>
                     </notebook>
                 </sheet>
