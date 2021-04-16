@@ -23,6 +23,21 @@
         <field name="name">Harry Potter</field>
         <field name="edition_date">2020-08-01</field>
         <field name="isbn">0-553-10354-7</field>
+        <field name="base_price">300</field>
+    </record>
+    
+     <record id="book_got" model="library.book">
+        <field name="name">Harry Potter</field>
+        <field name="edition_date">2020-08-01</field>
+        <field name="isbn">0-553-10354-7</field>
+        <field name="base_price">300</field>
+    </record>
+    
+     <record id="book_got" model="library.book">
+        <field name="name">El señor de los anillos</field>
+        <field name="edition_date">2021-08-01</field>
+        <field name="isbn">0-55210354-7</field>
+        <field name="base_price">500</field>
     </record>
 
     <record id="publisher_got" model="library.publisher">
